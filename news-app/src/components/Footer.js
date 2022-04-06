@@ -2,8 +2,8 @@
 function Footer() {
    return(
       <footer className="footer">
-         <div className="footer-container">
-            <p>Footer</p>
+         <div className="footer--container">
+            <p className="footer-text">Built using React | By Dan Anderson</p>
          </div>
       </footer>
    );

@@ -1,9 +1,14 @@
 
+//files used
+import logo from "../files/images/app-logo.png"; 
+
 function Header() {
    return(
       <header className="header">
          <div className="header--container">
-            <h1>Header</h1>
+            <div className="logo">
+               <img src={logo} alt="news app logo" />
+            </div>
          </div>
       </header>
    );
