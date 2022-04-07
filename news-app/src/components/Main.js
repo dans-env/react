@@ -20,7 +20,6 @@ const Main = () => {
       const articleArray = data.articles.map((article, i) => (
          <Article
             key={i}
-            author={article.author}
             source={article.source.name}
             picture={article.urlToImage}
             title={article.title}
