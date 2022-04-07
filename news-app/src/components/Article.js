@@ -6,6 +6,7 @@ const Article = props => {
       <div className="article">
          <div className="picture">
             {(props.picture) ? <img src={props.picture} alt="Article picture" /> : <img src={defaultImage} alt="Article picture" />}
+            <span className="source">{props.source}</span>
          </div>
          <div className="info">
             <div className="title">
