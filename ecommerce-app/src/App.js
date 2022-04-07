@@ -1,7 +1,15 @@
-function App() {
+import { useState } from "react";
+
+//template imported
+import MainTemplate from "./templates/MainTemplate";
+
+const App = () => {
+
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
+
   return (
-    <h1>E-commerce App</h1>
+    <MainTemplate />
   );
-}
+};
 
 export default App;
