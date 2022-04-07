@@ -79,7 +79,7 @@ img {
 
 .header {
   width: 100%;
-  height: 60px;
+  height: 80px;
   background: #1d1d1d;
   position: fixed;
   z-index: 999;
@@ -92,7 +92,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 4%;
+  padding: 20px 4%;
 }
 
 .logo {
@@ -124,7 +124,7 @@ img {
 /* Main */
 
 .main {
-  margin-top: 60px; /* used to clear fixed header */
+  margin-top: 80px; /* used to clear fixed header */
   min-height: calc(100vh - 94px);
   background: #151515;
 }
