@@ -1,5 +1,5 @@
 
-function Error(props) {
+const Error = props => {
    return(
       <div className="error">
          <div className="error-container">

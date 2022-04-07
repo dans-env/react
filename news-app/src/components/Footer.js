@@ -1,5 +1,5 @@
 
-function Footer() {
+const Footer = () => {
    return(
       <footer className="footer">
          <div className="footer--container">

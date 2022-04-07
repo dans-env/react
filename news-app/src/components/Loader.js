@@ -1,8 +1,8 @@
 
 //files used
-import loadingGif from "../files/images/loading.png";
+import loadingGif from "../assets/images/loading.png";
 
-function Loader() {
+const Loader = () => {
    return(
       <div className="loader">
          <div className="loader--container">
