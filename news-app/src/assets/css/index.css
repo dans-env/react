@@ -83,7 +83,7 @@ img {
   height: 80px;
   background: #1d1d1d;
   position: fixed;
-  z-index: 999;
+  z-index: 99999;
   top: 0;
   left: 0;
   box-shadow: 0 0 10px -5px #151515;
@@ -180,6 +180,21 @@ img {
   object-fit: cover;
   object-position: center;
   opacity: .65;
+}
+
+.article .picture .source {
+  display: inline-block;
+  background: #61dafb;
+  opacity: 1;
+  z-index: 999;
+  position: relative;
+  color: #1d1d1d;
+  padding: 7px 7px;
+  top: 5px;
+  left: 5px;
+  font-size: 10px;
+  border-radius: 3px;
+  font-weight: 700;
 }
 
 .article .info {
