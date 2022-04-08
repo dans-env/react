@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto Mono', monospace;
+  color: #171717;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,10 +26,31 @@ ul {
 
 a {
   text-decoration: none;
+  color: #171717;
 }
 
 img {
   max-width: 100%;
+}
+
+span.orange {
+  color: #e04f00;
+}
+
+span.bold {
+  font-weight: 700;
+}
+
+
+
+/* Fonts - Simple Icons */
+
+@font-face {
+  font-family: "simple-icon";
+  src: url("../fonts/simple/simple.ttf") format("ttf"),
+       url("../fonts/simple/simple.eot") format("eot"),
+       url("../fonts/simple/simple.woff") format("woff"),
+       url("../fonts/simple/simple.svg") format("svg"); 
 }
 
 
@@ -55,7 +77,38 @@ img {
   background: #171717;
 }
 
-.header--container {
+.header-top--container {
+  padding: 5px 4%;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome-message p {
+  font-size: 12px;
+}
+
+.header-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-links ul li {
+  margin: 0 5px;
+}
+
+.header-links ul li:last-child {
+  margin-right: 0;
+}
+
+.header-links ul li a {
+  display: block;
+  font-size: 12px;
+}
+
+.header-middle--container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -87,6 +140,111 @@ img {
 
 .header-logo h1 {
   font-size: 24px;
+  color: #fff;
+}
+
+
+
+/* Footer Styling */
+
+.footer {
+  background: #171717;
+}
+
+.footer-top--container {
+  max-width: 1200px;
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 45px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col .title {
+  margin-bottom: 15px;
+}
+
+.footer-col .title h5 {
+  font-size: 16px;
+  color: #fff;
+}
+
+.footer-col .list li,
+.footer-col .list li a {
+  font-size: 12px;
+  color: #fff;
+}
+
+.footer-col .list li {
+  margin: 8px 0;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons .icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+}
+
+.social-icons .icon:first-child {
+  margin-left: 0;
+}
+
+.social-icons .icon:last-child {
+  margin-right: 0;
+}
+
+.social-icons .icon a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 1px solid #fff;
+}
+
+.social-icons .icon a::before {
+  font-family: "simple-icon";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.social-icons .icon a.facebook::before {
+  content: "\ea90";
+}
+
+.social-icons .icon a.twitter::before {
+  content: "\ea96";
+}
+
+.social-icons .icon a.linkedin::before {
+  content: "\eaca";
+}
+
+.footer-bottom--container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 15px;
+  border-top: 1px dashed #333;
+}
+
+.footer-bottom--container p {
+  font-size: 12px;
   color: #fff;
 }
 
@@ -140,6 +298,10 @@ img {
   animation-duration: .2s;
 }
 
+
+
+/* Banner Styling */
+
 .banner {
   display: block;
   width: 100%;
@@ -154,27 +316,50 @@ img {
   position: relative;
 }
 
+.slide {
+  height: 450px;
+}
+
+.background {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .banner-information {
   display: flex;
   align-items: center;
   max-width: 550px;
   height: 100%;
   padding-left: 4%;
+  position: relative;
+  z-index: 10;
 }
 
 .banner-title {
   font-size: 42px;
+  color: #fff;
   margin-bottom: 15px;
 }
 
 .banner-description {
   font-size: 14px;
+  color: #ccc;
   margin-bottom: 30px;
 }
 
 .banner-link {
   display: inline-block;
-  color: #000;
+  color: #fff;
   position: relative;
   z-index: 2;
   font-weight: 700;
@@ -198,3 +383,22 @@ img {
   z-index: 1;
 }
 
+/* Trust Marks */
+
+.trust-marks {
+  background: #e1e1e1;
+}
+
+.trust-marks--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.trust-mark-col {
+  width: 25%;
+  padding: 0 15px;
+}
