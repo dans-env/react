@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 body {
@@ -78,11 +79,11 @@ span.bold {
 }
 
 .header-top--container {
-  padding: 5px 4%;
-  background: #e1e1e1;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 5px 4%;
+  background: #e1e1e1;
 }
 
 .welcome-message p {
@@ -112,35 +113,38 @@ span.bold {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 4%;
+  padding: 25px 4%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
 }
 
 .header-logo {
   display: flex;
   align-items: center;
+  margin-right: 30px;
 }
 
 .header-logo::before {
   content: '';
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 2px;
+  height: 43px;
   margin-right: 5px;
   text-align: center;
   line-height: 35px;
   font-size: 30px;
   color: #fff;
-  border: 15px solid;
-  border-left-color: #e04f00;
-  border-top-color: #c8c8c8;
-  border-bottom-color: #efefef;
-  border-right-color: #efefef;
-  border-radius: 0 0 5px 0px;
+  background: #fff;
 }
 
 .header-logo h1 {
-  font-size: 24px;
+  font-size: 38px;
   color: #fff;
+  line-height: 41px;
+  margin-top: 4px;
 }
 
 
@@ -209,6 +213,7 @@ span.bold {
   height: 100%;
   position: relative;
   border: 1px solid #fff;
+  border-radius: 5px;
 }
 
 .social-icons .icon a::before {
@@ -255,6 +260,7 @@ span.bold {
 .menu {
   display: flex;
   align-items: center;
+  margin-top: 4px;
 }
 
 .menu .menu--item {
@@ -300,6 +306,48 @@ span.bold {
 
 
 
+/* Search styling */
+
+.search-form {
+  display: flex;
+}
+
+.search-form .search-input {
+  min-width: 315px;
+  height: 43px;
+  text-indent: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-left: 2px solid #e04f00;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-form .search-button {
+  width: 43px;
+  height: 43px;
+  border: none;
+  background: #000000;
+  color: #fff;
+  position: relative;
+  font-size: 0;
+  cursor: pointer;
+  border-right: 2px solid #e04f00;
+  border-radius: 0 5px 5px 0;
+}
+
+.search-form .search-button::before {
+  content: "\e986";
+  font-family: "simple-icon";
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+
+
 /* Banner Styling */
 
 .banner {
@@ -338,7 +386,7 @@ span.bold {
 .banner-information {
   display: flex;
   align-items: center;
-  max-width: 550px;
+  max-width: 650px;
   height: 100%;
   padding-left: 4%;
   position: relative;
@@ -346,13 +394,14 @@ span.bold {
 }
 
 .banner-title {
-  font-size: 42px;
+  font-size: 45px;
   color: #fff;
   margin-bottom: 15px;
 }
 
 .banner-description {
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 28px;
   color: #ccc;
   margin-bottom: 30px;
 }
@@ -377,10 +426,11 @@ span.bold {
   width: calc(100% + 5px);
   height: 12px;
   position: absolute;
-  left: -2px;
+  left: -3px;
   bottom: 0;
   background: #f24000;
   z-index: 1;
+  border-radius: 5px;
 }
 
 /* Trust Marks */

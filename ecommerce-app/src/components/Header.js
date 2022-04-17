@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import WelcomeMessage from "./WelcomeMessage";
 import HeaderLinks from "./HeaderLinks";
 import Navigation from "./Navigation";
+import Search from "./Search";
 
 const Header = () => {
    return(
@@ -16,11 +17,16 @@ const Header = () => {
             </div>
          </div>
          <div className="header-middle--container">
-            <div className="header-logo">
-               <Logo />
+            <div className="nav">
+               <div className="header-logo">
+                  <Logo />
+               </div>
+               <div className="header-navigation">
+                  <Navigation />
+               </div>
             </div>
-            <div className="header-navigation">
-               <Navigation />
+            <div className="seach">
+               <Search />
             </div>
          </div>
       </header>
