@@ -74,6 +74,7 @@ body {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   font-size: 0;
   position: relative;
+  transition: all .3s ease-in-out;
 }
 
 .add-todo::after {
@@ -84,6 +85,10 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 24px;
+}
+
+.add-todo:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
 
 .main {
