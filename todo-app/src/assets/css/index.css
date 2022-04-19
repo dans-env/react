@@ -10,6 +10,15 @@
 body {
   width: 100%;
   min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.woff") format("woff"),
+  url("../fonts/icons.ttf") format("ttf"),
+  url("../fonts/icons.eot") format("eot"),
+  url("../fonts/icons.svg") format("svg");
 }
 
 #app-mount {
@@ -18,38 +27,77 @@ body {
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  background: #ccc;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
 .app-container {
   max-width: 650px;
   width: 100%;
   margin: 60px 0;
+  box-shadow: 0 0 60px rgba(0, 0, 0, .1);
+  border-radius: 10px;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  background: #5b8ac3;
+  padding: 30px 25px;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px 10px 0 0;
 }
 
 .logo {
-  font-size: 22px;
-  color: #fff;
+  display: block;
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: #f6f6f6;
+  font-weight: 700;
 }
 
-.add-todo-button {
+.stats {
+  font-size: 14px;
+  color: #dddddd;
+}
+
+.add-todo {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   font-size: 22px;
   line-height: 42px;
   border: none;
-  border-radius: 40px;
-  background: #45678f;
+  border-radius: 50px;
   color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-size: 0;
+  position: relative;
+}
+
+.add-todo::after {
+  font-family: "icons";
+  content: "\e900";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
+
+.main {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 25px;
+  background: #ededed;
+  border-radius: 0 0 10px 10px;
+}
+
+.no-items {
+  color: #bbb;
 }
 
 

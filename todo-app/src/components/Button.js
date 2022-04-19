@@ -1,6 +1,10 @@
 function Button(props) {
+   const handleOnclick = () => {
+      alert("Button was clicked");
+   };
+
    return(
-      <button className={props.buttonClass}>{props.buttonText}</button>
+      <button className={props.buttonClass} onClick={handleOnclick}>{props.buttonText}</button>
    );
 };
 
