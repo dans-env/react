@@ -1,8 +1,15 @@
 function Todo() {
+   const deleteTodo = (event) => {
+      const element = event.target.parentNode.parentNode;
+      element.remove();
+   };
+
    return(
       <div className="todo-item">
-         <div className="container">
-            <p>Test Todo</p>
+         <p contentEditable={true} suppressContentEditableWarning={true}>Edit me!</p>
+         <div className="icons-container">
+            <span className="edit"></span>
+            <span className="bin" onClick={deleteTodo}></span>
          </div>
       </div>
    );

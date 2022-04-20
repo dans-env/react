@@ -1,7 +1,7 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
+import { TodoContext } from "./contexts/TodoContext";
 import Header from "./components/Header";
 import Main from "./components/Main";
-import { TodoContext } from "./contexts/TodoContext";
 
 function App() {
   const [todos, setTodos] = useState([]);
