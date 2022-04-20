@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import Todo from "./Todo";
+import { TodoContext } from "../contexts/TodoContext";
+
 function Button(props) {
+   const { setTodos } = useContext(TodoContext);
    const handleOnclick = () => {
-      alert("Button was clicked");
+      setTodos("Hello");
    };
 
    return(

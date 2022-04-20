@@ -1,8 +1,14 @@
+import { useContext } from "react";
+import { TodoContext } from "../contexts/TodoContext";
+
 function Main() {
+   const { todos } = useContext(TodoContext);
+   const noitems = <p className="no-items">There are no items in your list</p>
+
    return(
       <main className="main">
          <div className="container">
-            <p className="no-items">There are no checklist items</p>
+            { (todos.length > 0) ? todos : noitems }
          </div>
       </main>
    );
