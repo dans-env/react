@@ -11,12 +11,12 @@ function Todo(props) {
 
    const markTodoAsComplete = (todo) => {
       todo.classList.add("checked");
-      todo.style.webkitFilter = "grayscale(60%)";
+      todo.style.background = "#ccc";
    };
 
    const unmarkTodoAsComplate = (todo) => {
       todo.classList.remove("checked");
-      todo.style.webkitFilter = "grayscale(0%)";
+      todo.style.backgroundImage = "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
    }
 
    const checkTodoState = (event) => {
@@ -28,7 +28,7 @@ function Todo(props) {
       <div className="todo-item" name={props.name}>
          <div className="content">
             <div className="checkbox" onClick={checkTodoState}></div>
-            <p contentEditable={true} suppressContentEditableWarning={true}>Edit me!</p>
+            <p contentEditable={true} suppressContentEditableWarning={true}>Click me to edit!</p>
          </div>
          <span className="bin" onClick={deleteTodo}></span>
       </div>
