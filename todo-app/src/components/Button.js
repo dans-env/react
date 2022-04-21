@@ -6,13 +6,13 @@ function Button(props) {
    const [keyValue, setKeyValue] = useState(0);
    const { setTodos } = useContext(TodoContext);
 
-   const handleOnclick = () => {
+   const addTodo = () => {
       setKeyValue(prevKeyValue => prevKeyValue + 1);
-      setTodos(prevTodos => [...prevTodos, <Todo key={keyValue} />]);
+      setTodos(prevTodos => [...prevTodos, <Todo key={keyValue} name={`item-${keyValue}`}/>]);
    };
 
    return(
-      <button className={props.buttonClass} onClick={handleOnclick}>{props.buttonText}</button>
+      <button className={props.buttonClass} onClick={addTodo}>{props.buttonText}</button>
    );
 };
 
