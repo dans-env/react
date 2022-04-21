@@ -11,6 +11,8 @@ body {
   width: 100%;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
+  background: url("../images/mountain.jpeg") no-repeat;
+  background-size: cover;
 }
 
 @font-face {
@@ -27,7 +29,7 @@ body {
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(to top, #afbbc2 0%, #e2ebf0 100%);
+  background-image: linear-gradient(to top, rgba(175, 187, 194, .8) 0%, rgba(226, 235, 240, .8) 100%);
 }
 
 .app-container {
