@@ -27,7 +27,7 @@ body {
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-image: linear-gradient(to top, #afbbc2 0%, #e2ebf0 100%);
 }
 
 .app-container {
@@ -134,8 +134,28 @@ body {
   margin-top: 10px;
 }
 
-.todo-item p {
+.todo-item .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-item .content .checkbox {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.todo-item .content p {
   color: #ddd;
+}
+
+.todo-item.checked .content p {
+  text-decoration: line-through;
 }
 
 .todo-item .bin::after {
