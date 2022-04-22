@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  overflow: hidden;
+}
+
+#app-mount {
+  height: 100%;
+}
+
+#main-template {
+  display: flex;
+  height: 100%;
+}
+
+.side-view {
+  width: 241px;
+  background: #000000;
+}
+
+.main-view {
+  width: calc(100% - 241px);
+}
