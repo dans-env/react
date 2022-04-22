@@ -7,13 +7,24 @@
   box-sizing: border-box;
 }
 
-body {
+.body {
   width: 100%;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
-  background: url("../images/buildings.jpeg") no-repeat;
   background-size: cover;
   overflow: hidden;
+}
+
+.body.abstract {
+  background: url("../images/abstract.jpeg") no-repeat;
+}
+
+.body.buildings {
+  background: url("../images/buildings.jpeg") no-repeat;
+}
+
+.body.mountain {
+  background: url("../images/mountain.jpeg") no-repeat;
 }
 
 @font-face {
@@ -22,6 +33,13 @@ body {
   url("../fonts/icons.ttf") format("ttf"),
   url("../fonts/icons.eot") format("eot"),
   url("../fonts/icons.svg") format("svg");
+}
+
+@keyframes slide-out {
+  0%   {width: 0;}
+  25%  {width: 100px;}
+  50%  {width: 200px;}
+  100% {width: 300px;}
 }
 
 #app-mount {
@@ -175,22 +193,19 @@ body {
   right: 20px;
   width: 50px;
   height: 50px;
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 50px;
-  box-shadow: 0 0 20px rgb(0 0 0 / 30%);
   cursor: pointer;
   transition: all .3s ease-in-out;
-}
-
-.change-background:hover {
-  box-shadow: 0 0 20px rgb(0 0 0 / 50%);
 }
 
 .background-icon {
   display: block;
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+  z-index: 99;
 }
 
 .background-icon::after {
@@ -203,20 +218,24 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999;
+}
+
+.background-icon:hover {
+  box-shadow: 0 0 20px rgb(0 0 0 / 50%);
 }
 
 .background-list {
   display: none;
   position: absolute;
-  background: #fff;
+  background: #ededed;
   left: 0;
   top: 50%;
   transform: translate(calc(-100% + 50px), -50%);
   border-radius: 50px;
   overflow: hidden;
   padding-right: 50px;
-  z-index: 9;
+  animation-name: slide-out;
+  animation-duration: .3s;
 }
 
 .background-list ul {
@@ -228,7 +247,19 @@ body {
 }
 
 .background-list ul li {
+  display: flex;
+  align-items: center;
+  height: 50px;
   padding: 10px 10px;
+  color: #677487;
+}
+
+.background-list ul li:first-child {
+  padding-left: 30px;
+}
+
+.background-list ul li:last-child {
+  padding-right: 24px;
 }
 
 .change-background:hover .background-list {
