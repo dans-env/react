@@ -8,6 +8,7 @@ const MainTemplate = () => {
             <Navigation />
          </div>
          <div className="main-view">
+            <div className="gradient-background"></div>
             <TopBar />
          </div>
       </div>

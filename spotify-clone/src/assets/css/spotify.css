@@ -84,11 +84,63 @@ a {
   margin-right: 15px;
 }
 
+.gradient-background {
+  background-color: #535353;
+  background-image: linear-gradient(#0009 0,#121212 100%);
+  height: 332px;
+  margin-top: -64px;
+  position: absolute;
+  -webkit-transition: background 1s ease;
+  transition: background 1s ease;
+  width: 100%;
+  z-index: -1;
+}
+
 .top-bar {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 32px;
+  width: calc(100% - 241px);
   height: 64px;
   background: rgba(0, 0, 0, .5);
+}
+
+.navigation-buttons .prev,
+.navigation-buttons .next {
+  width: 32px;
+  height: 32px;
+  font-size: 0;
+  border: none;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, .7);
+}
+
+.navigation-buttons .prev {
+  margin-right: 16px;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+}
+
+.auth-buttons .register,
+.auth-buttons .login {
+  height:48px;
+  border: none;
+  border-radius: 48px;
+  padding-inline: 32px;
+  padding-block: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #fff;
+}
+
+.auth-buttons .register {
+  background: transparent;
+  color: #b3b3b3;
 }
