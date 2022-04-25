@@ -10,7 +10,16 @@
 body {
   height: 100vh;
   font-family: 'Zen Kaku Gothic New', sans-serif;
+  background: #121212;
   overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 #app-mount {
@@ -29,4 +38,57 @@ body {
 
 .main-view {
   width: calc(100% - 241px);
+}
+
+.main-navigation {
+  padding-top: 24px;
+}
+
+.logo-container {
+  padding: 0 24px;
+  margin-bottom: 26px;
+}
+
+.logo-container .logo {
+  display: flex;
+  max-width: 131px;
+  width: 100%;
+}
+
+.menu {
+  padding: 0 24px;
+}
+
+.menu .item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.menu .item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu .item a span {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #b3b3b3
+}
+
+.menu .item a span.icon {
+  margin-right: 15px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  height: 64px;
+  background: rgba(0, 0, 0, .5);
 }

@@ -1,11 +1,14 @@
+import Navigation from "../components/Navigation";
+import TopBar from "../components/TopBar";
+
 const MainTemplate = () => {
    return (
       <div id="main-template">
          <div className="side-view">
-            <p>Side bar</p>
+            <Navigation />
          </div>
          <div className="main-view">
-            <p>Content</p>
+            <TopBar />
          </div>
       </div>
    );
