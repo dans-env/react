@@ -38,6 +38,7 @@ a {
 
 .main-view {
   width: calc(100% - 241px);
+  padding-top: 64px;
 }
 
 .main-navigation {
@@ -105,6 +106,7 @@ a {
   width: calc(100% - 241px);
   height: 64px;
   background: rgba(0, 0, 0, .5);
+  top: 0;
 }
 
 .navigation-buttons .prev,
@@ -138,9 +140,32 @@ a {
   font-size: 16px;
   font-weight: 700;
   background: #fff;
+  cursor: pointer;
 }
 
 .auth-buttons .register {
   background: transparent;
+  color: #b3b3b3;
+}
+
+.main-content-view {
+  padding: 24px;
+}
+
+.shelf-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shelf-title h3 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.shelf-title a {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
   color: #b3b3b3;
 }
